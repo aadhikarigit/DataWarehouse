@@ -30,6 +30,22 @@ repo.
 select top 10 * from [pat].[tbl_PatientHistoRecord]
 select * from tbl_NRLHistoTests
 
+select top 1 * from tbl_DiagnosisGroup
+select top 1 * from [tbl_Antimicrobial Agents]
+select top 1 * from tbl_DifferentialTestList
+select top 1 * from tbl_NRLTests
+select top 1 * from tbl_NRLHistoTests
+select top 1 * from tbl_HistoTestType
+select top 1 * from tbl_Test_DiagnosisGroup
+select top 1 * from tbl_Test_GroupType
+select top 1 * from tbl_TestPanel_ProfileGroup
+select top 1 * from tbl_Panel_ProfileGroup
+select top 1 * from tbl_TestResultForReport
+select top 1 * from tbl_SubTests
+select top 1 * from tbl_ExecutivePanel
+select top 1 * from tbl_ExecutiveTestGroup
+select top 1 * from tbl_RangeOfTests
+
 
 
 select  FirstName+LastName, count(*)
