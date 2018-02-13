@@ -1,0 +1,60 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="2/13/2018 4:41:30 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="LOCALHOST-MYPC"
+  DTS:CreatorName="LOCALHOST-MYPC\aawar"
+  DTS:DTSID="{5077A7FA-4143-4047-8FB0-9DACF46AF32E}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="14.0.3002.92"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="LoadWarehouse"
+  DTS:PackageType="5"
+  DTS:VersionBuild="2"
+  DTS:VersionGUID="{6AE7F46F-310B-44FB-AE54-1E64FA530563}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DbSource]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{53FF3345-DB48-4409-940C-EE40C71E03DF}"
+      DTS:ObjectName="DbSource">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=103.233.58.81;User ID=aawart;Initial Catalog=Carelab_Ktm_Current;Provider=SQLNCLI11.1;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA1Z39BBcKpE+0AKLIC+FKVAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABmVCKAMcimuUHpjOIhfPfA+mGaRPq8jJPK87wgex4nbQAAAAAOgAAAAAIAACAAAACzbGfgx3zNqiLzA4Yyp6NaSsVEZVj+gMeKCt1xqYjsuiAAAAC586KrpwFDrET7UM6T1QOOZmCR97P6scJjHsCHZNvy0UAAAACod2M/qEZXlDZnY/zVTK+Zbb323fvo/8a8G5IxgXS8H0TrtHiT96dIOim7ev5CMPQ5fOpxcDjP6849FDX9u+Ig</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DbWareHouse]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{B0134DA5-7DBA-47F8-A2E0-FFE5C1C4F2E0}"
+      DTS:ObjectName="DbWareHouse">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=103.233.58.81;User ID=aawart;Initial Catalog=DataWareHouse;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA1Z39BBcKpE+0AKLIC+FKVAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACf800pXoy9t2HB7/7WzZP3xZ96p7b1ZXhtquXKfJ05UAAAAAAOgAAAAAIAACAAAAANsrlv5UNDUoWxqP9mj1wMVdGx2S9RRDxWUknE12noRyAAAAA3PvTBn6Uuf5GVNr50Sg26bJnnR4GzlH/ysE89/hk8ukAAAACrgi1/9uog9Hg2yQz1eGYZNdpsza3IHPBRoX3QLDGP+jxIUYiDdkrXyz7DmnPzc91P8tJH4jY4okSPZ6DI0Wf+</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables />
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
