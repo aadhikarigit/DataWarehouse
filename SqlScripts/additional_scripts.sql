@@ -71,3 +71,5 @@ update pm
 set pm.CreditParty=tcp.PartyType
 from DataWareHouse.dbo.PatientMaster pm 
 join tbl_CreditPartyType tcp on pm.CrdtPrtyId = tcp.TypeId
+
+-- Add bill number to PatientBillMaster
