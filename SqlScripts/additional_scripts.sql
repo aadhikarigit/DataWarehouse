@@ -73,3 +73,62 @@ from DataWareHouse.dbo.PatientMaster pm
 join tbl_CreditPartyType tcp on pm.CrdtPrtyId = tcp.TypeId
 
 -- Add bill number to PatientBillMaster
+
+create table DataWareHouse..Int_PatientBillReport -- First intermediate table
+(
+  ClientId int
+        ,
+  PatId int
+        ,
+  _OrigPatId int
+        ,
+  BillId int
+        ,
+  _OrigBillId int
+        ,
+  BillNo nvarchar(12)
+        ,
+  BillDate datetime
+        ,
+  ReportDate datetime
+        ,
+  EnteredBy varchar(50)
+        ,
+  SpecialistId int
+        ,
+  IsReportTaken char(1) -- y or n
+        ,
+  IsDone char(1)   -- y or n
+        ,
+  IsPartiallyDone char(1)  -- y or n
+        ,
+  BillPriceFinal money
+)
+
+-- Second intermediate table for test details
+
+create table DataWareHouse..Int_PatientReportDetails
+(
+  PatId int
+        ,
+  _OrigPatId int
+        ,
+  ReportDate datetime
+        ,
+  TestID int
+        ,
+  _OrigTestId int
+        ,
+  PanelId int
+        ,
+  _OrigPanelId int
+        ,
+  TestRange nvarchar(max)
+        ,
+  IsExecutive char(1)  -- y or n
+        ,
+  TestPrice money
+        ,
+  TestResult nvarchar(50)
+)
+
