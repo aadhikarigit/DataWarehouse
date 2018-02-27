@@ -328,7 +328,7 @@ select ipbr.MemberCode
 , SecondSpecialistId as CheckedByID
 , DiagId as DiagnosisID
 , TestID as TestID
-, '' as Method
+, tm.Method as Method
 , TestRange as Range
 , TestResult as Result
 , TestPrice as Price
@@ -338,4 +338,5 @@ select ipbr.MemberCode
 , getdate() as UpdateTs
 from DataWareHouse.dbo.Int_PatientBillReport ipbr
   join DataWareHouse.dbo.Int_PatientReportDetails iprd on iprd.PatId=ipbr.PatId and iprd.ReportDate=ipbr.ReportDate
+  left join DataWareHouse.dbo.TestMaster tm on tm.ID = iprd.TestID
   left join DataWareHouse.dbo.PatientMaster pm on pm.ID=ipbr.PatId
