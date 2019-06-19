@@ -54,30 +54,38 @@ CREATE TABLE LoginInfo
 	,IsActive		BIT
 )
 
-CREATE TABLE PatientMaster
+CREATE TABLE [dbo].[PatientMaster](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[MainPatID] [int] NULL,
+	[IsMember] [bit] NULL,
+	[MemberCode] [varchar](50) NULL,
+	[FirstName] [varchar](50) NULL,
+	[MidName] [varchar](50) NULL,
+	[LastName] [varchar](50) NULL,
+	[FullName] [varchar](100) NULL,
+	[Dob] [date] NULL,
+	[Gender] [char](1) NULL,
+	[Address1] [varchar](100) NULL,
+	[Address2] [varchar](100) NULL,
+	[Address3] [varchar](100) NULL,
+	[ContactNo] [varchar](20) NULL,
+	[EmailId] [varchar](50) NULL,
+	[IdentityID] [varchar](50) NULL,
+	[IdentityType] [varchar](20) NULL,
+	[Salutation] [varchar](10) NULL,
+	[ContactNo2] [varchar](20) NULL,
+	[ContactNo3] [varchar](20) NULL,
+	[CrdtPrtyId] [int] NULL,
+	[IsActive] [bit] NULL,
+	[CreateTs] [datetime] NULL,
+	[UpdateTs] [datetime] NULL,
+	[CreditParty] [varchar](100) NULL,
+	[NepaliDate] [nvarchar](15) NULL,
+	[Requestor] [nvarchar](255) NULL,
+	[Age] [nvarchar](20) NULL,
+	[PDate] [datetime] NULL,
+PRIMARY KEY CLUSTERED 
 (
-	 ID				INT IDENTITY(1,1) PRIMARY KEY
-	,MainPatID		INT		-- Application Generated ID / LOCAL Id
-	,IsMember		BIT
-	,MemberCode		VARCHAR(50)
-	,FirstName		VARCHAR(50)
-	,MidName		VARCHAR(50)
-	,LastName		VARCHAR(50)
-	,FullName		VARCHAR(100)
-	,Dob			DATE
-	,Gender			CHAR(1)
-	,Address1		VARCHAR(100)
-	,Address2		VARCHAR(100)
-	,Address3		VARCHAR(100)
-	,ContactNo		VARCHAR(20)
-	,EmailId		VARCHAR(50)
-	,IdentityID		VARCHAR(50)
-	,IdentityType	VARCHAR(20)
-	,Salutation		VARCHAR(5)
-	,ContactNo2		VARCHAR(20)
-	,ContactNo3		VARCHAR(20)
-	,CrdtPrtyId		INT
-	,IsActive		BIT
-	,CreateTs		DATETIME
-	,UpdateTs		DATETIME
-)
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
