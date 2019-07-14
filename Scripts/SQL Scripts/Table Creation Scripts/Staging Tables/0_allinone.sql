@@ -1,0 +1,40 @@
+-- create staging tables
+	-- All Master tables
+		-- Patient MASTER
+		-- Test MASTER
+		-- SubTest MASTER
+		-- Member MASTER
+		-- Master Specialist
+		-- Panel MASTER
+		-- PatientHisto MASTER
+		-- Login MASTER
+		-- Diagnosis MASTER
+		-- Requestor MASTER
+		-- Bill MASTER
+		-- BillLogin MASTER
+		-- BranchPatientHisto MASTER
+		-- BranchPatient MASTER
+		
+	-- All Int tables
+		-- Int_PatientBillReport
+		-- Int_PatientHistoDetails
+		-- Int_PatientReportDetails
+		-- Int_BranchPatientBillReport
+		-- Int_BranchPatientHistoDetails
+		-- Int_BranchPatientReportDetails
+		
+	-- All Fact tables
+		-- FactPatientDiagnosis
+		-- FactPatientHistoRecords
+		-- FactBranchPatientDiagnosis
+		-- FactBranchPatientHistoRecords
+	
+	-- All other tables
+		-- LoginInfo
+		-- New_patientTestRecordResult
+		-- Rights
+		-- ROLES
+		-- Role_Rights
+		-- StoneReport
+		-- tbl_MolecularBiologyLookUp
+		-- tbl_QuadrupleLookUp
